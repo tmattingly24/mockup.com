@@ -6,8 +6,20 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var mongoose = require('mongoose');
+var log = require('log-util');
+var env = require('dotenv').config();
 
 var app = express();
+
+
+//db connection
+var connectString = `mongodb://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0-shard-00-00-1capq.mongodb.net:27017,cluster0-shard-00-01-1capq.mongodb.net:27017,cluster0-shard-00-02-1capq.mongodb.net:27017/sitemockup?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true`;
+
+mongoose.connect(connectString)
+        .then(() => { log.info('Connected'); })
+        .catch((err) => { log.error(`Unable to connect. Failed to start application: ${err}`); });
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
