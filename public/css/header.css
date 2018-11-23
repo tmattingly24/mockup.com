@@ -1,0 +1,22 @@
+html, body{
+    height:100%;
+    margin:0;
+		background-color:whitesmoke;
+}
+.headerwrapper {
+  margin-top:0;
+	width:960px;
+	height:20%;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.header{
+height:20%;
+background-color:blue;
+
+}
+
+h1{
+  margin:0;
+}

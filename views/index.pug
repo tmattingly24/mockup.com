@@ -1,5 +1,8 @@
 extends layout
-
 block content
-  h1= title
-  p Welcome to #{title}
+  block append head
+    link(rel='stylesheet', href='/css/index.css')
+  include header.pug
+  .index-col1
+  .index-col2
+  include footer.pug
