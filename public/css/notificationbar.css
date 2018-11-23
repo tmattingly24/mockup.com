@@ -1,0 +1,23 @@
+html, body{
+    height:100%;
+    margin:0;
+		background-color:whitesmoke;
+}
+.headerwrapper {
+  margin-top:0;
+	width:960px;
+	height:20%;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.notificationbar{
+height:5%;
+background-color:black;
+
+}
+
+.notificationbar h1{
+  color:white;
+  margin:0;
+}

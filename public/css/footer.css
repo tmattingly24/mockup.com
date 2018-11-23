@@ -7,14 +7,14 @@
 }
 
 .footer{
+  margin-top:-5px;
+  height:20%;
 width:100%;
-position:absolute;
-bottom:0;
-height:20%;
 background-color:black;
 
 }
 
-h1{
+.footer h1{
+  color:white;
   margin:0;
 }
