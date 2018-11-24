@@ -9,8 +9,23 @@ block append head
     label(for "pass") Password:
     input(type = "password" id = "pass")
     br
-    button Login
+    button#loginBtn Login
     p#switchToReg Not a User? Sign Up Now
   form#RegForm.hidden
     h2 Register
+    label(for "fName") First Name:
+    input(type = "text" id = "fName")
+    br
+    label(for "lName") Last Name:
+    input(type = "text" id = "lName")
+    br
+    label(for "regEmailAddy") Email:
+    input(type = "email" id = "regEmailAddy")
+    br
+    label(for "regPass") Password:
+    input(type = "password" id = "regPass")
+    br
+    label(for "regPassConf") Confirm Password:
+    input(type = "password" id = "regPassConf")
+    button#regBtn Login
     p#switchToLogin <-Back To Login

@@ -4,12 +4,14 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var favicon = require('serve-favicon');
-
+var routes = require('./routes/routes');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var mongoose = require('mongoose');
 var log = require('log-util');
 var env = require('dotenv').config();
+var user = require('./routes/api/api-users');
+var session = require('express-session');
 
 var app = express();
 
@@ -31,12 +33,19 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(session({
+  secret:"secretSauce",
+  resave:"true",
+  saveUninitialized:"true"
+}));
 app.use(express.static(path.join(__dirname, 'public')));
 
 //adding the routes
 app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
-app.use('/', indexRouter);
+app.use(express.static(path.join(__dirname, 'public')));
+app.use('/', routes);
 app.use('/users', usersRouter);
+app.use('/user/', user);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
