@@ -1,12 +1,14 @@
 //client side functions
 $(document).ready(() => {
-
   $('#switchToReg').click(() => {
-
-    alert("switch forms");
-
+    hide($('#loginForm'));
+    show($('#RegForm'));
   });
 
+  $('#switchToLogin').click(() => {
+    show($('#loginForm'));
+    hide($('#RegForm'));
+  });
 
 //general helper functions
     function writeMessage(element, text){
@@ -27,7 +29,8 @@ $(document).ready(() => {
         }
     }
     function show(element){
-      if(!element.hasClass('hidden')){
+      if(element.hasClass('hidden')){
         element.toggleClass("hidden");
       }
     }
+  });

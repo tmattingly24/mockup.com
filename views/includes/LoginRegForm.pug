@@ -1,7 +1,7 @@
 block append head
     link(rel='stylesheet', href='/css/includesStyles/loginReg.css')
 .loginRegForm
-  form
+  form#loginForm
     h2 Login
     label(for "emailAddy") Email:
     input(type = "email" id = "emailAddy")
@@ -11,3 +11,6 @@ block append head
     br
     button Login
     p#switchToReg Not a User? Sign Up Now
+  form#RegForm.hidden
+    h2 Register
+    p#switchToLogin <-Back To Login
