@@ -1,0 +1,13 @@
+block append head
+    link(rel='stylesheet', href='/css/includesStyles/loginReg.css')
+.loginRegForm
+  form
+    h2 Login
+    label(for "emailAddy") Email:
+    input(type = "email" id = "emailAddy")
+    br
+    label(for "pass") Password:
+    input(type = "password" id = "pass")
+    br
+    button Login
+    p#switchToReg Not a User? Sign Up Now

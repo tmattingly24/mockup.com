@@ -8,13 +8,14 @@
   "dependencies": {
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
+    "dotenv": "^5.0.1",
     "express": "~4.16.0",
     "http-errors": "~1.6.2",
-    "morgan": "~1.9.0",
-    "pug": "2.0.0-beta11",
-    "mongoose": "^5.0.13",
     "log-util": "^1.2.0",
-    "dotenv": "^5.0.1",
+    "mongoose": "^5.0.13",
+    "morgan": "~1.9.0",
+    "nodemailer": "^4.7.0",
+    "pug": "2.0.0-beta11",
     "serve-favicon": "^2.5.0"
   }
 }

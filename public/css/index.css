@@ -14,7 +14,7 @@ html, body{
   width:33%;
   height:75%;
   display:inline-block;
-  background-color:red;
+  background-color:aliceblue;
 
 }
 .index-col2{
@@ -22,9 +22,18 @@ html, body{
   width:67%;
   height:75%;
   display:inline-block;
-  background-color:purple;
+  float:right;
+  background-color:aliceblue;
 
 }
 h1{
   margin:0;
+}
+
+.loginRegForm{
+  width: 400px;
+  text-align:center;
+  margin-left:auto;
+  margin-right:auto;
+  border: thin solid black;
 }

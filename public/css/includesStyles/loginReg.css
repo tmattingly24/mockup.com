@@ -1,0 +1,16 @@
+.loginRegForm{
+  width: 400px;
+  text-align:center;
+  margin-left:auto;
+  margin-right:auto;
+  border: thin solid black;
+}
+#switchToReg{
+  color:blue;
+  text-decoration:underline;
+}
+#switchToReg:hover{
+  color:black;
+  font-size:large;
+  cursor:pointer;
+}

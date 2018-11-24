@@ -2,10 +2,9 @@ extends layout
 block content
   block append head
     link(rel='stylesheet', href='/css/index.css')
-  include header.pug
-  include notificationbar.pug
+  include includes/header.pug
+  include includes/notificationbar.pug
   .index-col1
-    h1 index column 1
   .index-col2
-    h1 index column 2
-  include footer.pug
+    include includes/LoginRegForm.pug
+  include includes/footer.pug

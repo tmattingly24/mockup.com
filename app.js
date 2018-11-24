@@ -22,6 +22,7 @@ mongoose.connect(connectString)
         .catch((err) => { log.error(`Unable to connect. Failed to start application: ${err}`); });
 
 
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
